@@ -1,0 +1,18 @@
+﻿using System;
+using System.Console;
+
+class Program
+{
+  static Main() : void
+  {
+    //Language.Run();
+    
+    def parser = SimpleParserG();
+    while(true) {
+      match(parser.Parse(ReadLine())){
+        | Some(ast) => WriteLine($"good: $ast")
+        | None()    => WriteLine("error")
+      }
+    }
+  }
+}

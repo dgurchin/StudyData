@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotherProject", "MotherProject\MotherProject.csproj", "{39DB7830-1CCA-4607-A169-7D74E2B59D66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kernel", "..\Common\Kernel\Kernel.csproj", "{7DA8E6D7-BAAE-425E-866E-1D2077874D58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39DB7830-1CCA-4607-A169-7D74E2B59D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39DB7830-1CCA-4607-A169-7D74E2B59D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39DB7830-1CCA-4607-A169-7D74E2B59D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39DB7830-1CCA-4607-A169-7D74E2B59D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DA8E6D7-BAAE-425E-866E-1D2077874D58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DA8E6D7-BAAE-425E-866E-1D2077874D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DA8E6D7-BAAE-425E-866E-1D2077874D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DA8E6D7-BAAE-425E-866E-1D2077874D58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

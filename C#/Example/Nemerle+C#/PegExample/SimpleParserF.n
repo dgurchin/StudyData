@@ -1,0 +1,18 @@
+﻿using System;
+using Nemerle.Peg;
+
+[PegGrammar(option=none, number,grammar {
+  hex    : int = ['A'..'F','0'..'9'];
+  d      : int = ['0'..'9'];
+  number : int = d / hex;
+})]
+class SimpleParserF
+{
+  hex(token : NToken) : int {
+    Convert.ToInt32(GetText(token),16)
+  }
+  
+  d(token : NToken) : int {
+    int.Parse(GetText(token))
+  }
+}

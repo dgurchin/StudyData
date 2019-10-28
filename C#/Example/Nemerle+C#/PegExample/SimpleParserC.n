@@ -1,0 +1,17 @@
+﻿using System;
+using Nemerle.Peg;
+
+[PegGrammar(option=none, number,grammar {
+  d      : int = ['0'..'9'];
+  number : int = d d;
+})]
+class SimpleParserC
+{
+  d(token : NToken) : int {
+    int.Parse(GetText(token))
+  }
+  
+  number(a : int, b : int) : int {
+    a * 10 + b
+  }
+}

@@ -1,0 +1,30 @@
+c:\users\dmitriygurchin\documents\visual studio 2012\Projects\TestProject\TestProject\bin\Debug\TestProject.exe.config
+c:\users\dmitriygurchin\documents\visual studio 2012\Projects\TestProject\TestProject\bin\Debug\TestProject.exe
+c:\users\dmitriygurchin\documents\visual studio 2012\Projects\TestProject\TestProject\bin\Debug\TestProject.pdb
+c:\users\dmitriygurchin\documents\visual studio 2012\Projects\TestProject\TestProject\obj\Debug\TestProject.csprojResolveAssemblyReference.cache
+c:\users\dmitriygurchin\documents\visual studio 2012\Projects\TestProject\TestProject\obj\Debug\TestProject.Form1.resources
+c:\users\dmitriygurchin\documents\visual studio 2012\Projects\TestProject\TestProject\obj\Debug\TestProject.Properties.Resources.resources
+c:\users\dmitriygurchin\documents\visual studio 2012\Projects\TestProject\TestProject\obj\Debug\TestProject.csproj.GenerateResource.Cache
+c:\users\dmitriygurchin\documents\visual studio 2012\Projects\TestProject\TestProject\obj\Debug\TestProject.exe
+c:\users\dmitriygurchin\documents\visual studio 2012\Projects\TestProject\TestProject\obj\Debug\TestProject.pdb
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\TestProject\Application\TestProject\bin\Debug\TestProject.exe.config
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\TestProject\Application\TestProject\bin\Debug\TestProject.exe
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\TestProject\Application\TestProject\bin\Debug\TestProject.pdb
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\TestProject\Application\TestProject\obj\Debug\TestProject.csprojResolveAssemblyReference.cache
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\TestProject\Application\TestProject\obj\Debug\TestProject.Form1.resources
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\TestProject\Application\TestProject\obj\Debug\TestProject.Properties.Resources.resources
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\TestProject\Application\TestProject\obj\Debug\TestProject.csproj.GenerateResource.Cache
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\TestProject\Application\TestProject\obj\Debug\TestProject.exe
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\TestProject\Application\TestProject\obj\Debug\TestProject.pdb
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\Application\TestProject\bin\Debug\TestProject.exe.config
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\Application\TestProject\bin\Debug\TestProject.exe
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\Application\TestProject\bin\Debug\TestProject.pdb
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\Build\TestProject.exe.config
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\Build\TestProject.exe
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\Build\TestProject.pdb
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\Application\TestProject\obj\Debug\TestProject.csprojResolveAssemblyReference.cache
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\Application\TestProject\obj\Debug\TestProject.Form1.resources
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\Application\TestProject\obj\Debug\TestProject.Properties.Resources.resources
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\Application\TestProject\obj\Debug\TestProject.csproj.GenerateResource.Cache
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\Application\TestProject\obj\Debug\TestProject.exe
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\Application\TestProject\obj\Debug\TestProject.pdb

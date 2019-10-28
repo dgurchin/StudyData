@@ -1,0 +1,17 @@
+C++
+constructor
+constructor copy
+destructor
+operator =
+
+
+* – Куча
+& – Стек
+(ничего) – Регистровая память
+
+
+C#
+Static constructor
+Constructor
+
+

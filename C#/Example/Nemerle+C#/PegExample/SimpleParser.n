@@ -1,0 +1,21 @@
+﻿using Nemerle.Collections;
+using Nemerle.Text;
+using Nemerle.Utility;
+using Nemerle.Peg;
+using Nemerle.ComputationExpressions;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+[PegGrammar(number, grammar {
+  ANY            = ['\u0000'..'\uFFFF'];
+  comment : void = "/*" (!"*/" ANY)* "*/";
+  number  : int  = (comment*['0'..'9'])+ comment* !ANY;
+})]
+class SimpleParser
+{
+  number(num : List[NToken]) : int {
+    int.Parse(string.Join("",num.MapToArray(GetText)))
+  }
+}
+// "45/* comment */6"

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="10.0.0.1" Id="ef34fdfb-7857-431d-8e81-3f1c87399927" manyToManyCollectionIDColumnType="AnsiChar" manyToManyCollectionIDGenerator="None" xmlns="http://schemas.microsoft.com/dsltools/ActiveWriter">
+  <additionalImports>AAEAAAD/////AQAAAAAAAAAMAgAAAF1DYXN0bGUuQWN0aXZlV3JpdGVyLkRzbCwgVmVyc2lvbj0xLjIwMTAuMC4xLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTYwMzA0NTg1MTgzMWVkNWMEAQAAAJ4BU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tDYXN0bGUuQWN0aXZlV3JpdGVyLkltcG9ydCwgQ2FzdGxlLkFjdGl2ZVdyaXRlci5Ec2wsIFZlcnNpb249MS4yMDEwLjAuMSwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj02MDMwNDU4NTE4MzFlZDVjXV0DAAAABl9pdGVtcwVfc2l6ZQhfdmVyc2lvbgQAABxDYXN0bGUuQWN0aXZlV3JpdGVyLkltcG9ydFtdAgAAAAgICQMAAAAAAAAAAAAAAAcDAAAAAAEAAAAAAAAABBpDYXN0bGUuQWN0aXZlV3JpdGVyLkltcG9ydAIAAAAL</additionalImports>
+  <classes>
+    <modelClass name="ModelClass1">
+      <properties>
+        <modelProperty Id="984b5775-1fc3-483c-97d7-6827438a1371" name="id" columnType="Int32" length="0" keyType="PrimaryKey" />
+        <modelProperty Id="21a6867c-8b4b-45f5-9eda-f606006e661d" name="Name" length="0" />
+      </properties>
+    </modelClass>
+    <modelClass name="ModelClass2">
+      <targets>
+        <manyToOneRelation Id="fdccb6ef-e5e7-4e81-8987-c2fb17c98974">
+          <modelClassMoniker name="/ef34fdfb-7857-431d-8e81-3f1c87399927/ModelClass1" />
+        </manyToOneRelation>
+      </targets>
+      <properties>
+        <modelProperty Id="f4ec87e2-0289-42e0-93c4-087a54f0836b" name="id" columnType="Int32" length="0" keyType="PrimaryKey" />
+        <modelProperty Id="85ecdb7d-22eb-46fd-b522-b216b440a069" name="ModelProperty1" length="0" />
+      </properties>
+    </modelClass>
+  </classes>
+</model>

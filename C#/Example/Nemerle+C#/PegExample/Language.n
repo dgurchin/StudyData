@@ -1,0 +1,208 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Console;
+using System.Linq;
+using Nemerle.Peg;
+using Nemerle.ComputationExpressions;
+using System.Globalization;
+
+variant Evaluable {
+  | Number { value : double }
+  | Variable { name : string }
+  | Call { f : string; arg : Evaluable }
+}
+
+variant Output {
+  | Value { value : Evaluable }
+  | Data { value : string }
+  | Function { name : string }
+  | Diff { name : string }
+}
+
+variant Command {
+  | Exit
+  | DefFunction { name : string; terms : List[double*int] }
+  | FunctionOp  { target : string; op1 : string; op2 : string; sign : int }
+  | Assign { name : string; value : Evaluable }
+  | ListFunctions
+  | ListVariables
+  | Print { data : List[Output] }
+}
+
+[PegGrammar(option=none, start, grammar {
+  ANY               = ['\u0000'..'\uFFFF'];
+  INTEGER           = (!'0' ['0'..'9']+) / '0';
+  FLOAT             = INTEGER '.' ('0'* ['1'..'9'])+;
+  LETTER            = ['a'..'z'] / ['A'..'Z'];
+  NAME              = LETTER (LETTER / ['0'..'9'] / '_')*;
+  s       : void    = ' '*;
+  
+  termA   : double*string*int = number;
+  termB   : double*string*int = number? NAME ("^" INTEGER)?;
+  term    : double*string*int = !"-" termB / termA;
+  
+  evaluableVar    : Evaluable               = NAME;
+  evaluableNum    : Evaluable               = number;
+  evaluableCall   : Evaluable               = NAME "(" evaluable ")";
+  evaluable       : Evaluable               = evaluableCall / evaluableVar / evaluableNum;
+  
+  stringOutput    : Output                  = '"' (!'"' ANY)* '"';
+  evaluableOutput : Output                  = evaluable;
+  functionOutput  : Output                  = NAME "()";
+  diffOutput      : Output                  = NAME "'()";
+  
+  print           : Command                 = "print" (' 's (diffOutput / functionOutput / stringOutput / evaluableOutput))+ s;
+  assign          : Command                 = NAME "=" evaluable;
+  polynomial      : List[double*string*int] = "-"? term (("+" / "-") term)*;
+  defFunction     : Command                 = NAME "(" NAME ")" "=" polynomial;
+  exit            : Command                 = "exit" / "quit";
+  listFunctions   : Command                 = "list functions";
+  listVariables   : Command                 = "list variables";
+  functionOp      : Command                 = NAME "=" NAME ("+"/"-") NAME;
+  number          : double                  = "-"? (FLOAT / INTEGER);
+  start           : Command                 = functionOp / print / listVariables / listFunctions / assign / defFunction / exit;
+})]
+class Language
+{
+  functionOp(target : NToken, _ : NToken, op1 : NToken, sign : NToken, op2 : NToken) : Command {
+    Command.FunctionOp(GetText(target), GetText(op1), GetText(op2), if (GetText(sign)=="+") 1 else -1)
+  }
+  
+  print(_ : NToken, foo : List[NToken*Output]) : Command { Command.Print(foo.Select(x=>x[1]).ToList()) }
+  
+  stringOutput(_ : NToken, data : NToken, _ : NToken) : Output { Output.Data(GetText(data)) }
+  
+  functionOutput(name : NToken, _ : NToken) : Output { Output.Function(GetText(name)) }
+  
+  diffOutput(name : NToken, _ : NToken) : Output { Output.Diff(GetText(name)) }
+  
+  evaluableOutput(data : Evaluable) : Output { Output.Value(data) }
+  
+  evaluableVar(name : NToken) : Evaluable { Evaluable.Variable(GetText(name)) }
+  
+  evaluableNum(value : double) : Evaluable { Evaluable.Number(value) }
+  
+  evaluableCall(function : NToken, _ : NToken, arg: Evaluable, _ : NToken) : Evaluable { Evaluable.Call(GetText(function), arg) }
+  
+  assign(name : NToken, _ : NToken, value : Evaluable) : Command { Command.Assign(GetText(name), value) }
+  
+  defFunction(funName : NToken, _ : NToken, variable : NToken, _ : NToken, _ : NToken, polynomial : List[double*string*int]) : Command {
+    def variable = GetText(variable);
+    foreach((_,var,_) in polynomial) when(var != "" && var != variable) throw Exception();
+    Command.DefFunction(GetText(funName), polynomial.Select((a,_,c)=>(a,c)).ToList())
+  }
+  
+  termA(number : double) : double*string*int { (number,"",0) }
+  
+  termB(number : option[double], name : NToken, power : option[NToken*NToken]) : double*string*int { 
+    def number = if (number.HasValue) number.Value else 1.0;
+    def power = match(power){
+      | Some((_,value)) => int.Parse(GetText(value))
+      | None()          => 1;
+    }
+    (number,GetText(name),power) 
+  }
+  
+  polynomial(sign : NToken, term : double*string*int, terms : List[NToken * (double*string*int)]) : List[double*string*int] {
+    def negative(a,b,c) { (-a,b,c) }
+    terms.Insert(0, (sign,term));
+    def result = List();
+    foreach((sign,term) in terms) {
+      result.Add(if (GetText(sign)=="-") negative(term) else term);
+    }
+    result
+  }
+  
+  exit(_ : NToken) : Command { Command.Exit()  }
+  
+  listFunctions(_ : NToken) : Command { Command.ListFunctions()  }
+  
+  listVariables(_ : NToken) : Command { Command.ListVariables()  }
+  
+  number(sign : NToken, value : NToken) : double {
+    def value = double.Parse(GetText(value));
+    match(GetText(sign)){
+      | "-" => -value
+      | ""  => value
+    }
+  }
+  
+  public static Run() : void
+  {
+    System.Threading.Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+    
+    def functions = Dictionary();
+    def variables = Dictionary();
+    
+    def evalFunc(name, value) {
+      mutable result = 0.0;
+      foreach((k,p) in functions[name]) result += k*Math.Pow(value,p);
+      result
+    }
+    
+    def eval(evaluable : Evaluable) {
+      | Number(value)    => value
+      | Variable(name)   => variables[name]
+      | Call(name,value) => evalFunc(name, eval(value))
+    }
+    
+    def termToString(k : double,power) {
+      mutable result = "";
+      if (power == 0) result=k.ToString();
+      else when (k!=0) {
+        when(k!=1) result=k.ToString();
+        result+="x";
+        when(power!=1) result+= "^" + power.ToString();
+      }
+      result
+    }
+    
+    def functionToString(name, poly) {
+      mutable result = $"$name(x)=";
+      using(def iter = poly.Where((k : double,p) => p==0 || k!=0).GetEnumerator()) {
+        _ = iter.MoveNext();
+        result += termToString(iter.Current);
+        while(iter.MoveNext()) {
+          def (k,_)  = iter.Current;
+          when (k >= 0.0) result += "+";
+          result += termToString(iter.Current);
+        }
+      }
+      result
+    }
+    
+    def diff(poly : List[double*int]) {
+      comp enumerable { foreach((k,p) in poly) when (p!=0) yield (k*p : double,p-1) }
+    }
+    
+    def addPoly(a : List[double*int], b : List[double*int], sign : int) {
+      def b = if (sign > 0) b else b.Select(((k,p),_)=>(-k,p));
+      Enumerable.Concat(a,b).GroupBy((_,p)=>p).Select(xx => (xx.Select(((k,_),_)=>k).Aggregate(_+_), xx.Key)).ToList();
+    }
+    
+    def repl(line) {
+      def (read, command) = Language().TryParse(line);
+      if (read != line.Length) WriteLine("error");
+      else match(command) {
+        | Command.Exit => ()
+        | _ => match(command) {
+              | Command.ListFunctions           => foreach(name in functions.Keys) WriteLine(functionToString(name, functions[name]))
+              | Command.ListVariables           => foreach(name in variables.Keys) WriteLine($"$name = $(variables[name])")
+              | Command.DefFunction(name, poly) => functions[name] = poly;
+              | Command.FunctionOp(t,a,b,o)     => functions[t] = addPoly(functions[a],functions[b],o)
+              | Command.Assign(name,value)      => variables[name] = eval(value);
+              | Command.Print(data)             => foreach(item in data) match(item) {
+                  | Output.Data(value)    => Write(value)
+                  | Output.Value(value)   => Write(eval(value))
+                  | Output.Function(name) => Write(functionToString(name, functions[name]))
+                  | Output.Diff(name)     => Write(functionToString(name+"'", diff(functions[name])))
+                }
+                WriteLine();
+            }
+            repl(ReadLine());
+      }
+    }
+    
+    repl(ReadLine());
+  }
+}

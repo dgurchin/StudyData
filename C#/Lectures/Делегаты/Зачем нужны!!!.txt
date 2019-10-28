@@ -1,0 +1,93 @@
+Зачем нужны делагаты:
+	
+
+	1. 	Для передачи в функцию в ввиде аргумента другой функции, с последующей возможностью вызова
+		передаваемой фкунции
+
+			using System;   
+			delegate int Arithm(int x, int y);
+
+
+			public class CSharpApp
+			{
+			    static void Main()
+			    {
+			        DoOperation(10, 2, Multiply);
+			        DoOperation(10, 2, Divide);
+			    }
+
+			    static void DoOperation(int x, int y, Arithm del)
+			    {
+			        int z = del(x, y);
+			        Console.WriteLine(z);
+			    }
+
+			    static int Multiply(int x, int y)
+			    {
+			        return x * y;
+			    }
+
+			    static int Divide(int x, int y)
+			    {
+			        return x / y;
+			    }
+			} 
+	
+	2. 	Делагаты это расширяемый массив адрессов функций одинаковой сигнатуры,
+		с возможностью вызова всех функций даного масива, с одинаковым 
+		параментром, который указывается при выполнении делегата.
+
+			using System;   
+
+			delegate void Mdelegate(int x, int y);
+
+			public class Oper
+			{
+			    public static void Add(int x, int y)
+			    {
+			        Console.WriteLine("{0} + {1} = {2}", x, y, x + y);
+			    }
+
+			    public static void Sub(int x, int y)
+			    {
+			        Console.WriteLine("{0} - {1} = {2}", x, y, x - y);
+			    }
+			}
+
+			public class CSharpApp
+			{
+			    static void Main()
+			    {
+			        Mdelegate del = new Mdelegate(Oper.Add);
+
+			        del += new Mdelegate(Oper.Sub);
+			        del(6, 4);            
+			        del -= new Mdelegate(Oper.Sub);
+			        del(2, 8);            
+			    }
+			}
+
+	3. 	Анонимные методы – это функции, которые генерируются компилятором, и выполняются в теле
+		функции. Новая сгенирированная компилятором функция (анонимная функция) имеет доступ ко всем переменным
+		материнской функции. Такие переменные называются захваченными переменными.
+		На основе аннонимных методов построены лямбда выражения. Лямбда выражения, это конструкции присущи
+		функциональному программированию.
+
+
+				using System;   
+
+				delegate void Mdelegate();
+
+				public class Anonymous
+				{
+				    static void Main()
+				    {
+				        Mdelegate del = delegate 
+				        { 
+				            Console.WriteLine("Anonymous method"); 
+				        };
+
+				        del();
+				    }
+				} 
+

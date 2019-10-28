@@ -1,0 +1,15 @@
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_3DS\Deikstri\bin\Debug\Deikstri.exe.config
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_3DS\Deikstri\bin\Debug\Deikstri.exe
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_3DS\Deikstri\bin\Debug\Deikstri.pdb
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_3DS\Deikstri\obj\Debug\Deikstri.exe
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_3DS\Deikstri\obj\Debug\Deikstri.pdb
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_3DS\Deikstri\obj\Debug\Deikstri.csprojResolveAssemblyReference.cache
+D:\Универ\vs12\Projects\LR_3DS\Deikstri\bin\Debug\Deikstri.exe.config
+D:\Универ\vs12\Projects\LR_3DS\Deikstri\obj\Debug\Deikstri.exe
+D:\Универ\vs12\Projects\LR_3DS\Deikstri\obj\Debug\Deikstri.pdb
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_3DS\Deikstri\bin\Debug\Deikstri.exe.config
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_3DS\Deikstri\obj\Debug\Deikstri.exe
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_3DS\Deikstri\obj\Debug\Deikstri.pdb
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_3DS\Deikstri\bin\Debug\Deikstri.exe
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_3DS\Deikstri\bin\Debug\Deikstri.pdb
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_3DS\Deikstri\obj\Debug\Deikstri.csprojResolveAssemblyReference.cache

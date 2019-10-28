@@ -1,0 +1,91 @@
+﻿public GetMaxRollbackPosAndIds() : int * System.Collections.Generic.List[int]
+{
+  def ids = System.Collections.Generic.List(42);
+  mutable max = -1;
+  
+  {
+  };
+  (max, ids)
+}
+
+public GetMaxRollbackPosAndNames() : int * System.Collections.Generic.List[string]
+{
+  def (max, ids) = GetMaxRollbackPosAndIds();
+  def names = System.Collections.Generic.List(ids.Count);
+  foreach (in(id, ids)) names.Add(GetRuleName(id));
+  (max, names)
+}
+
+public GetRuleName(id : int) : string
+{
+  match (id)
+    {
+    | 0 => 
+      "ANY"
+    | 10 => 
+      "doc"
+    | 9 => 
+      "jArray"
+    | 8 => 
+      "jObject"
+    | 6 => 
+      "jValue"
+    | 3 => 
+      "nullValue"
+    | 7 => 
+      "property"
+    | 4 => 
+      "stringJValue"
+    | 2 => 
+      "stringValue"
+    | 5 => 
+      "value"
+    | 1 => 
+      "ws"
+    | _  => 
+      "Unknown rule id."
+  }
+}
+
+private ResetMaxRollbackPos() : void 
+{
+}
+
+private ResetMemoization() : void 
+{
+}
+
+public Parse(text : string) : option[JsonData.JObject]
+{
+  def (pos, res) = TryParse(text);
+  if (pos < 0) None(); else Some(res)
+}
+
+public Parse(source : Nemerle.Peg.SourceSnapshot) : option[JsonData.JObject]
+{
+  def (pos, res) = TryParse(source);
+  if (pos < 0) None(); else Some(res)
+}
+
+public TryParse(text : string) : int * JsonData.JObject
+{
+  TryParse(Nemerle.Peg.SourceSnapshot(text))
+}
+
+public TryParse(source : Nemerle.Peg.SourceSnapshot) : int * JsonData.JObject
+{
+  _parsingSource = source;
+  mutable result;
+  result
+}
+
+protected GetText(tok : Nemerle.Peg.NToken) : string
+{
+  _parsingSource.OriginalText.Substring(tok.StartPos, tok.EndPos - tok.StartPos)
+}
+
+protected GetLocation(tok : Nemerle.Peg.NToken) : Nemerle.Peg.Location
+{
+  Nemerle.Peg.Location(_parsingSource, tok.StartPos, tok.EndPos)
+}
+

@@ -1,0 +1,8 @@
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\Build\Kernel.dll.config
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\Build\Kernel.dll
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\Build\Kernel.pdb
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\Common\Kernel\obj\Debug\Kernel.csprojResolveAssemblyReference.cache
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\Common\Kernel\obj\Debug\Kernel.Properties.Resources.resources
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\Common\Kernel\obj\Debug\Kernel.csproj.GenerateResource.Cache
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\Common\Kernel\obj\Debug\Kernel.dll
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\Common\Kernel\obj\Debug\Kernel.pdb

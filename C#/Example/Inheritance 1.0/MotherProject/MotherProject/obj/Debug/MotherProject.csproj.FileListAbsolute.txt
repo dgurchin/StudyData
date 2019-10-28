@@ -1,0 +1,8 @@
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\Build\MotherProject.exe
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\Build\MotherProject.pdb
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\MotherProject\MotherProject\obj\Debug\MotherProject.csprojResolveAssemblyReference.cache
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\MotherProject\MotherProject\obj\Debug\MotherProject.Form1.resources
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\MotherProject\MotherProject\obj\Debug\MotherProject.Properties.Resources.resources
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\MotherProject\MotherProject\obj\Debug\MotherProject.csproj.GenerateResource.Cache
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\MotherProject\MotherProject\obj\Debug\MotherProject.exe
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance\MotherProject\MotherProject\obj\Debug\MotherProject.pdb

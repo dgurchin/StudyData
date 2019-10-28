@@ -1,0 +1,709 @@
+﻿public GetMaxRollbackPosAndIds() : int * System.Collections.Generic.List[int]
+{
+  def ids = System.Collections.Generic.List(42);
+  mutable max = -1;
+  
+  {
+  };
+  (max, ids)
+}
+
+public GetMaxRollbackPosAndNames() : int * System.Collections.Generic.List[string]
+{
+  def (max, ids) = GetMaxRollbackPosAndIds();
+  def names = System.Collections.Generic.List(ids.Count);
+  foreach (in(id, ids)) names.Add(GetRuleName(id));
+  (max, names)
+}
+
+public GetRuleName(id : int) : string
+{
+  match (id)
+    {
+    | 0 => 
+      "ANY"
+    | 2 => 
+      "FLOAT"
+    | 1 => 
+      "INTEGER"
+    | 3 => 
+      "LETTER"
+    | 4 => 
+      "NAME"
+    | 18 => 
+      "assign"
+    | 20 => 
+      "defFunction"
+    | 16 => 
+      "diffOutput"
+    | 12 => 
+      "evaluable"
+    | 11 => 
+      "evaluableCall"
+    | 10 => 
+      "evaluableNum"
+    | 14 => 
+      "evaluableOutput"
+    | 9 => 
+      "evaluableVar"
+    | 21 => 
+      "exit"
+    | 24 => 
+      "functionOp"
+    | 15 => 
+      "functionOutput"
+    | 22 => 
+      "listFunctions"
+    | 23 => 
+      "listVariables"
+    | 25 => 
+      "number"
+    | 19 => 
+      "polynomial"
+    | 17 => 
+      "print"
+    | 5 => 
+      "s"
+    | 26 => 
+      "start"
+    | 13 => 
+      "stringOutput"
+    | 8 => 
+      "term"
+    | 6 => 
+      "termA"
+    | 7 => 
+      "termB"
+    | _  => 
+      "Unknown rule id."
+  }
+}
+
+private ResetMaxRollbackPos() : void 
+{
+}
+
+private ResetMemoization() : void 
+{
+}
+
+public Parse(text : string) : option[Command]
+{
+  def (pos, res) = TryParse(text);
+  if (pos < 0) None(); else Some(res)
+}
+
+public Parse(source : Nemerle.Peg.SourceSnapshot) : option[Command]
+{
+  def (pos, res) = TryParse(source);
+  if (pos < 0) None(); else Some(res)
+}
+
+public TryParse(text : string) : int * Command
+{
+  TryParse(Nemerle.Peg.SourceSnapshot(text))
+}
+
+public TryParse(source : Nemerle.Peg.SourceSnapshot) : int * Command
+{
+  _parsingSource = source;
+  mutable result;
+  result
+}
+
+protected GetText(tok : Nemerle.Peg.NToken) : string
+{
+  _parsingSource.OriginalText.Substring(tok.StartPos, tok.EndPos - tok.StartPos)
+}
+
+protected GetLocation(tok : Nemerle.Peg.NToken) : Nemerle.Peg.Location
+{
+  Nemerle.Peg.Location(_parsingSource, tok.StartPos, tok.EndPos)
+}
+
+public GetMaxRollbackPosAndIds() : int * System.Collections.Generic.List[int]
+{
+  def ids = System.Collections.Generic.List(42);
+  mutable max = -1;
+  
+  {
+  };
+  (max, ids)
+}
+
+public GetMaxRollbackPosAndNames() : int * System.Collections.Generic.List[string]
+{
+  def (max, ids) = GetMaxRollbackPosAndIds();
+  def names = System.Collections.Generic.List(ids.Count);
+  foreach (in(id, ids)) names.Add(GetRuleName(id));
+  (max, names)
+}
+
+public GetRuleName(id : int) : string
+{
+  match (id)
+    {
+    | 0 => 
+      "d"
+    | _  => 
+      "Unknown rule id."
+  }
+}
+
+private ResetMaxRollbackPos() : void 
+{
+}
+
+private ResetMemoization() : void 
+{
+}
+
+public Parse(text : string) : option[int]
+{
+  def (pos, res) = TryParse(text);
+  if (pos < 0) None(); else Some(res)
+}
+
+public Parse(source : Nemerle.Peg.SourceSnapshot) : option[int]
+{
+  def (pos, res) = TryParse(source);
+  if (pos < 0) None(); else Some(res)
+}
+
+public TryParse(text : string) : int * int
+{
+  TryParse(Nemerle.Peg.SourceSnapshot(text))
+}
+
+public TryParse(source : Nemerle.Peg.SourceSnapshot) : int * int
+{
+  _parsingSource = source;
+  mutable result;
+  result
+}
+
+protected GetText(tok : Nemerle.Peg.NToken) : string
+{
+  _parsingSource.OriginalText.Substring(tok.StartPos, tok.EndPos - tok.StartPos)
+}
+
+protected GetLocation(tok : Nemerle.Peg.NToken) : Nemerle.Peg.Location
+{
+  Nemerle.Peg.Location(_parsingSource, tok.StartPos, tok.EndPos)
+}
+
+public GetMaxRollbackPosAndIds() : int * System.Collections.Generic.List[int]
+{
+  def ids = System.Collections.Generic.List(42);
+  mutable max = -1;
+  
+  {
+  };
+  (max, ids)
+}
+
+public GetMaxRollbackPosAndNames() : int * System.Collections.Generic.List[string]
+{
+  def (max, ids) = GetMaxRollbackPosAndIds();
+  def names = System.Collections.Generic.List(ids.Count);
+  foreach (in(id, ids)) names.Add(GetRuleName(id));
+  (max, names)
+}
+
+public GetRuleName(id : int) : string
+{
+  match (id)
+    {
+    | 0 => 
+      "d"
+    | _  => 
+      "Unknown rule id."
+  }
+}
+
+private ResetMaxRollbackPos() : void 
+{
+}
+
+private ResetMemoization() : void 
+{
+}
+
+public Parse(text : string) : option[int]
+{
+  def (pos, res) = TryParse(text);
+  if (pos < 0) None(); else Some(res)
+}
+
+public Parse(source : Nemerle.Peg.SourceSnapshot) : option[int]
+{
+  def (pos, res) = TryParse(source);
+  if (pos < 0) None(); else Some(res)
+}
+
+public TryParse(text : string) : int * int
+{
+  TryParse(Nemerle.Peg.SourceSnapshot(text))
+}
+
+public TryParse(source : Nemerle.Peg.SourceSnapshot) : int * int
+{
+  _parsingSource = source;
+  mutable result;
+  result
+}
+
+protected GetText(tok : Nemerle.Peg.NToken) : string
+{
+  _parsingSource.OriginalText.Substring(tok.StartPos, tok.EndPos - tok.StartPos)
+}
+
+protected GetLocation(tok : Nemerle.Peg.NToken) : Nemerle.Peg.Location
+{
+  Nemerle.Peg.Location(_parsingSource, tok.StartPos, tok.EndPos)
+}
+
+public GetMaxRollbackPosAndIds() : int * System.Collections.Generic.List[int]
+{
+  def ids = System.Collections.Generic.List(42);
+  mutable max = -1;
+  
+  {
+  };
+  (max, ids)
+}
+
+public GetMaxRollbackPosAndNames() : int * System.Collections.Generic.List[string]
+{
+  def (max, ids) = GetMaxRollbackPosAndIds();
+  def names = System.Collections.Generic.List(ids.Count);
+  foreach (in(id, ids)) names.Add(GetRuleName(id));
+  (max, names)
+}
+
+public GetRuleName(id : int) : string
+{
+  match (id)
+    {
+    | 0 => 
+      "d"
+    | 1 => 
+      "number"
+    | _  => 
+      "Unknown rule id."
+  }
+}
+
+private ResetMaxRollbackPos() : void 
+{
+}
+
+private ResetMemoization() : void 
+{
+}
+
+public Parse(text : string) : option[int]
+{
+  def (pos, res) = TryParse(text);
+  if (pos < 0) None(); else Some(res)
+}
+
+public Parse(source : Nemerle.Peg.SourceSnapshot) : option[int]
+{
+  def (pos, res) = TryParse(source);
+  if (pos < 0) None(); else Some(res)
+}
+
+public TryParse(text : string) : int * int
+{
+  TryParse(Nemerle.Peg.SourceSnapshot(text))
+}
+
+public TryParse(source : Nemerle.Peg.SourceSnapshot) : int * int
+{
+  _parsingSource = source;
+  mutable result;
+  result
+}
+
+protected GetText(tok : Nemerle.Peg.NToken) : string
+{
+  _parsingSource.OriginalText.Substring(tok.StartPos, tok.EndPos - tok.StartPos)
+}
+
+protected GetLocation(tok : Nemerle.Peg.NToken) : Nemerle.Peg.Location
+{
+  Nemerle.Peg.Location(_parsingSource, tok.StartPos, tok.EndPos)
+}
+
+public GetMaxRollbackPosAndIds() : int * System.Collections.Generic.List[int]
+{
+  def ids = System.Collections.Generic.List(42);
+  mutable max = -1;
+  
+  {
+  };
+  (max, ids)
+}
+
+public GetMaxRollbackPosAndNames() : int * System.Collections.Generic.List[string]
+{
+  def (max, ids) = GetMaxRollbackPosAndIds();
+  def names = System.Collections.Generic.List(ids.Count);
+  foreach (in(id, ids)) names.Add(GetRuleName(id));
+  (max, names)
+}
+
+public GetRuleName(id : int) : string
+{
+  match (id)
+    {
+    | 0 => 
+      "d"
+    | 1 => 
+      "number"
+    | _  => 
+      "Unknown rule id."
+  }
+}
+
+private ResetMaxRollbackPos() : void 
+{
+}
+
+private ResetMemoization() : void 
+{
+}
+
+public Parse(text : string) : option[int]
+{
+  def (pos, res) = TryParse(text);
+  if (pos < 0) None(); else Some(res)
+}
+
+public Parse(source : Nemerle.Peg.SourceSnapshot) : option[int]
+{
+  def (pos, res) = TryParse(source);
+  if (pos < 0) None(); else Some(res)
+}
+
+public TryParse(text : string) : int * int
+{
+  TryParse(Nemerle.Peg.SourceSnapshot(text))
+}
+
+public TryParse(source : Nemerle.Peg.SourceSnapshot) : int * int
+{
+  _parsingSource = source;
+  mutable result;
+  result
+}
+
+protected GetText(tok : Nemerle.Peg.NToken) : string
+{
+  _parsingSource.OriginalText.Substring(tok.StartPos, tok.EndPos - tok.StartPos)
+}
+
+protected GetLocation(tok : Nemerle.Peg.NToken) : Nemerle.Peg.Location
+{
+  Nemerle.Peg.Location(_parsingSource, tok.StartPos, tok.EndPos)
+}
+
+public GetMaxRollbackPosAndIds() : int * System.Collections.Generic.List[int]
+{
+  def ids = System.Collections.Generic.List(42);
+  mutable max = -1;
+  
+  {
+  };
+  (max, ids)
+}
+
+public GetMaxRollbackPosAndNames() : int * System.Collections.Generic.List[string]
+{
+  def (max, ids) = GetMaxRollbackPosAndIds();
+  def names = System.Collections.Generic.List(ids.Count);
+  foreach (in(id, ids)) names.Add(GetRuleName(id));
+  (max, names)
+}
+
+public GetRuleName(id : int) : string
+{
+  match (id)
+    {
+    | 0 => 
+      "d"
+    | 1 => 
+      "number"
+    | _  => 
+      "Unknown rule id."
+  }
+}
+
+private ResetMaxRollbackPos() : void 
+{
+}
+
+private ResetMemoization() : void 
+{
+}
+
+public Parse(text : string) : option[int]
+{
+  def (pos, res) = TryParse(text);
+  if (pos < 0) None(); else Some(res)
+}
+
+public Parse(source : Nemerle.Peg.SourceSnapshot) : option[int]
+{
+  def (pos, res) = TryParse(source);
+  if (pos < 0) None(); else Some(res)
+}
+
+public TryParse(text : string) : int * int
+{
+  TryParse(Nemerle.Peg.SourceSnapshot(text))
+}
+
+public TryParse(source : Nemerle.Peg.SourceSnapshot) : int * int
+{
+  _parsingSource = source;
+  mutable result;
+  result
+}
+
+protected GetText(tok : Nemerle.Peg.NToken) : string
+{
+  _parsingSource.OriginalText.Substring(tok.StartPos, tok.EndPos - tok.StartPos)
+}
+
+protected GetLocation(tok : Nemerle.Peg.NToken) : Nemerle.Peg.Location
+{
+  Nemerle.Peg.Location(_parsingSource, tok.StartPos, tok.EndPos)
+}
+
+public GetMaxRollbackPosAndIds() : int * System.Collections.Generic.List[int]
+{
+  def ids = System.Collections.Generic.List(42);
+  mutable max = -1;
+  
+  {
+  };
+  (max, ids)
+}
+
+public GetMaxRollbackPosAndNames() : int * System.Collections.Generic.List[string]
+{
+  def (max, ids) = GetMaxRollbackPosAndIds();
+  def names = System.Collections.Generic.List(ids.Count);
+  foreach (in(id, ids)) names.Add(GetRuleName(id));
+  (max, names)
+}
+
+public GetRuleName(id : int) : string
+{
+  match (id)
+    {
+    | 1 => 
+      "d"
+    | 0 => 
+      "hex"
+    | 2 => 
+      "number"
+    | _  => 
+      "Unknown rule id."
+  }
+}
+
+private ResetMaxRollbackPos() : void 
+{
+}
+
+private ResetMemoization() : void 
+{
+}
+
+public Parse(text : string) : option[int]
+{
+  def (pos, res) = TryParse(text);
+  if (pos < 0) None(); else Some(res)
+}
+
+public Parse(source : Nemerle.Peg.SourceSnapshot) : option[int]
+{
+  def (pos, res) = TryParse(source);
+  if (pos < 0) None(); else Some(res)
+}
+
+public TryParse(text : string) : int * int
+{
+  TryParse(Nemerle.Peg.SourceSnapshot(text))
+}
+
+public TryParse(source : Nemerle.Peg.SourceSnapshot) : int * int
+{
+  _parsingSource = source;
+  mutable result;
+  result
+}
+
+protected GetText(tok : Nemerle.Peg.NToken) : string
+{
+  _parsingSource.OriginalText.Substring(tok.StartPos, tok.EndPos - tok.StartPos)
+}
+
+protected GetLocation(tok : Nemerle.Peg.NToken) : Nemerle.Peg.Location
+{
+  Nemerle.Peg.Location(_parsingSource, tok.StartPos, tok.EndPos)
+}
+
+public GetMaxRollbackPosAndIds() : int * System.Collections.Generic.List[int]
+{
+  def ids = System.Collections.Generic.List(42);
+  mutable max = -1;
+  
+  {
+  };
+  (max, ids)
+}
+
+public GetMaxRollbackPosAndNames() : int * System.Collections.Generic.List[string]
+{
+  def (max, ids) = GetMaxRollbackPosAndIds();
+  def names = System.Collections.Generic.List(ids.Count);
+  foreach (in(id, ids)) names.Add(GetRuleName(id));
+  (max, names)
+}
+
+public GetRuleName(id : int) : string
+{
+  match (id)
+    {
+    | 0 => 
+      "ANY"
+    | 1 => 
+      "comment"
+    | 2 => 
+      "number"
+    | _  => 
+      "Unknown rule id."
+  }
+}
+
+private ResetMaxRollbackPos() : void 
+{
+}
+
+private ResetMemoization() : void 
+{
+}
+
+public Parse(text : string) : option[int]
+{
+  def (pos, res) = TryParse(text);
+  if (pos < 0) None(); else Some(res)
+}
+
+public Parse(source : Nemerle.Peg.SourceSnapshot) : option[int]
+{
+  def (pos, res) = TryParse(source);
+  if (pos < 0) None(); else Some(res)
+}
+
+public TryParse(text : string) : int * int
+{
+  TryParse(Nemerle.Peg.SourceSnapshot(text))
+}
+
+public TryParse(source : Nemerle.Peg.SourceSnapshot) : int * int
+{
+  _parsingSource = source;
+  mutable result;
+  result
+}
+
+protected GetText(tok : Nemerle.Peg.NToken) : string
+{
+  _parsingSource.OriginalText.Substring(tok.StartPos, tok.EndPos - tok.StartPos)
+}
+
+protected GetLocation(tok : Nemerle.Peg.NToken) : Nemerle.Peg.Location
+{
+  Nemerle.Peg.Location(_parsingSource, tok.StartPos, tok.EndPos)
+}
+
+public GetMaxRollbackPosAndIds() : int * System.Collections.Generic.List[int]
+{
+  def ids = System.Collections.Generic.List(42);
+  mutable max = -1;
+  
+  {
+  };
+  (max, ids)
+}
+
+public GetMaxRollbackPosAndNames() : int * System.Collections.Generic.List[string]
+{
+  def (max, ids) = GetMaxRollbackPosAndIds();
+  def names = System.Collections.Generic.List(ids.Count);
+  foreach (in(id, ids)) names.Add(GetRuleName(id));
+  (max, names)
+}
+
+public GetRuleName(id : int) : string
+{
+  match (id)
+    {
+    | 0 => 
+      "ANY"
+    | 1 => 
+      "comment"
+    | 2 => 
+      "number"
+    | _  => 
+      "Unknown rule id."
+  }
+}
+
+private ResetMaxRollbackPos() : void 
+{
+}
+
+private ResetMemoization() : void 
+{
+}
+
+public Parse(text : string) : option[int]
+{
+  def (pos, res) = TryParse(text);
+  if (pos < 0) None(); else Some(res)
+}
+
+public Parse(source : Nemerle.Peg.SourceSnapshot) : option[int]
+{
+  def (pos, res) = TryParse(source);
+  if (pos < 0) None(); else Some(res)
+}
+
+public TryParse(text : string) : int * int
+{
+  TryParse(Nemerle.Peg.SourceSnapshot(text))
+}
+
+public TryParse(source : Nemerle.Peg.SourceSnapshot) : int * int
+{
+  _parsingSource = source;
+  mutable result;
+  result
+}
+
+protected GetText(tok : Nemerle.Peg.NToken) : string
+{
+  _parsingSource.OriginalText.Substring(tok.StartPos, tok.EndPos - tok.StartPos)
+}
+
+protected GetLocation(tok : Nemerle.Peg.NToken) : Nemerle.Peg.Location
+{
+  Nemerle.Peg.Location(_parsingSource, tok.StartPos, tok.EndPos)
+}
+

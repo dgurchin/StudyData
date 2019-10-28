@@ -1,0 +1,20 @@
+﻿using System;
+using Nemerle.Peg;
+
+[PegGrammar(option=none, number,grammar {
+  d      : int = ['0'..'9'];
+  number : int = d d?;
+})]
+class SimpleParserD
+{
+  d(token : NToken) : int {
+    int.Parse(GetText(token))
+  }
+  
+  number(a : int, b : option[int]) : int {
+    match(b) {
+      | Some(b) => a * 10 + b
+      | None()  => a
+    }
+  }
+}

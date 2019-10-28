@@ -1,0 +1,12 @@
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_3DS\LR_3DS\bin\Debug\LR_3DS.exe.config
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_3DS\LR_3DS\obj\Debug\LR_3DS.csprojResolveAssemblyReference.cache
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_3DS\LR_3DS\bin\Debug\LR_3DS.exe
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_3DS\LR_3DS\bin\Debug\LR_3DS.pdb
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_3DS\LR_3DS\obj\Debug\LR_3DS.exe
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_3DS\LR_3DS\obj\Debug\LR_3DS.pdb
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_3DS\LR_3DS\bin\Debug\LR_3DS.exe.config
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_3DS\LR_3DS\obj\Debug\LR_3DS.exe
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_3DS\LR_3DS\obj\Debug\LR_3DS.pdb
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_3DS\LR_3DS\bin\Debug\LR_3DS.exe
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_3DS\LR_3DS\bin\Debug\LR_3DS.pdb
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_3DS\LR_3DS\obj\Debug\LR_3DS.csprojResolveAssemblyReference.cache

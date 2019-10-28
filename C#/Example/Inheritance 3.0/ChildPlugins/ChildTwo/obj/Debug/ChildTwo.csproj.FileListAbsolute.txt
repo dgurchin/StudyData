@@ -1,0 +1,7 @@
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\Build\Plugins\ChildTwo.dll
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\Build\Plugins\ChildTwo.pdb
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\ChildPlugins\ChildTwo\obj\Debug\ChildTwo.csprojResolveAssemblyReference.cache
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\ChildPlugins\ChildTwo\obj\Debug\ChildTwo.Properties.Resources.resources
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\ChildPlugins\ChildTwo\obj\Debug\ChildTwo.csproj.GenerateResource.Cache
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\ChildPlugins\ChildTwo\obj\Debug\ChildTwo.dll
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 3.0\ChildPlugins\ChildTwo\obj\Debug\ChildTwo.pdb

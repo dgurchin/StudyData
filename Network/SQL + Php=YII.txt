@@ -1,0 +1,5 @@
+SQL + Php=YII
+C++=>PHP-> Ruby Python... 
+HTML
+CSS 4
+JavaScript 

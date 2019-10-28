@@ -1,0 +1,11 @@
+C:\Users\Evgeniy\Documents\Visual Studio 2012\Projects\If_Then_Else\If_Then_Else\bin\Debug\If_Then_Else.exe.config
+C:\Users\Evgeniy\Documents\Visual Studio 2012\Projects\If_Then_Else\If_Then_Else\bin\Debug\If_Then_Else.exe
+C:\Users\Evgeniy\Documents\Visual Studio 2012\Projects\If_Then_Else\If_Then_Else\bin\Debug\If_Then_Else.pdb
+C:\Users\Evgeniy\Documents\Visual Studio 2012\Projects\If_Then_Else\If_Then_Else\obj\Debug\If_Then_Else.Form1.resources
+C:\Users\Evgeniy\Documents\Visual Studio 2012\Projects\If_Then_Else\If_Then_Else\obj\Debug\If_Then_Else.Properties.Resources.resources
+C:\Users\Evgeniy\Documents\Visual Studio 2012\Projects\If_Then_Else\If_Then_Else\obj\Debug\If_Then_Else.csproj.GenerateResource.Cache
+C:\Users\Evgeniy\Documents\Visual Studio 2012\Projects\If_Then_Else\If_Then_Else\obj\Debug\If_Then_Else.exe
+C:\Users\Evgeniy\Documents\Visual Studio 2012\Projects\If_Then_Else\If_Then_Else\obj\Debug\If_Then_Else.pdb
+C:\Users\Evgeniy\Documents\Visual Studio 2012\Projects\If_Then_Else\If_Then_Else\obj\Debug\If_Then_Else.Form2.resources
+C:\Users\Evgeniy\Documents\Visual Studio 2012\Projects\If_Then_Else\If_Then_Else\obj\Debug\If_Then_Else.Form3.resources
+C:\Users\Evgeniy\Documents\Visual Studio 2012\Projects\If_Then_Else\If_Then_Else\obj\Debug\If_Then_Else.csprojResolveAssemblyReference.cache

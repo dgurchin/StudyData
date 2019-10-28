@@ -1,0 +1,18 @@
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\Inheritance\Inheritance\bin\Debug\Inheritance.exe.config
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\Inheritance\Inheritance\bin\Debug\Inheritance.exe
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\Inheritance\Inheritance\bin\Debug\Inheritance.pdb
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\Inheritance\Inheritance\obj\Debug\Inheritance.csprojResolveAssemblyReference.cache
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\Inheritance\Inheritance\obj\Debug\Inheritance.Form1.resources
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\Inheritance\Inheritance\obj\Debug\Inheritance.Properties.Resources.resources
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\Inheritance\Inheritance\obj\Debug\Inheritance.csproj.GenerateResource.Cache
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\Inheritance\Inheritance\obj\Debug\Inheritance.exe
+C:\Users\DmitriyGurchin\Documents\Visual Studio 2012\Projects\Inheritance\Inheritance\obj\Debug\Inheritance.pdb
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 2.0\Inheritance\bin\Debug\Inheritance.exe.config
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 2.0\Inheritance\obj\Debug\Inheritance.exe
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 2.0\Inheritance\obj\Debug\Inheritance.pdb
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 2.0\Inheritance\bin\Debug\Inheritance.exe
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 2.0\Inheritance\bin\Debug\Inheritance.pdb
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 2.0\Inheritance\obj\Debug\Inheritance.csprojResolveAssemblyReference.cache
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 2.0\Inheritance\obj\Debug\Inheritance.Form1.resources
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 2.0\Inheritance\obj\Debug\Inheritance.Properties.Resources.resources
+D:\Project\EcoBalance\Main\StudyData\C#\Example\Inheritance 2.0\Inheritance\obj\Debug\Inheritance.csproj.GenerateResource.Cache

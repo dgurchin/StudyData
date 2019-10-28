@@ -1,0 +1,12 @@
+﻿using System;
+using Nemerle.Peg;
+
+[PegGrammar(option=none, d,grammar {
+  d  : int  = ['0'..'9'];
+})]
+class SimpleParserB
+{
+  d(token : NToken) : int {
+    int.Parse(GetText(token))
+  }
+}

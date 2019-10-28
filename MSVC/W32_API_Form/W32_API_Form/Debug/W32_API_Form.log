@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(402,5): warning MSB8038: Spectre mitigation is enabled but Spectre mitigated libraries are not found.  Verify that the Visual Studio Workload includes the Spectre mitigated libraries.  See https://aka.ms/Ofhn4c for more information.
+  cApplication.cpp
+d:\project\vd soft\studydata\msvc\w32_api_form\w32_api_form\capplication.cpp(100): warning C4838: conversion from 'UINT' to 'LONG' requires a narrowing conversion
+  W32_API_Form.vcxproj -> d:\Project\VD Soft\StudyData\MSVC\W32_API_Form\Debug\W32_API_Form.exe

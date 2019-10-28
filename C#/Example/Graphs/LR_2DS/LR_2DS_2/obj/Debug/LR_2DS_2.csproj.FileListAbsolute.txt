@@ -1,0 +1,15 @@
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_2DS\LR_2DS_2\bin\Debug\LR_2DS_2.exe.config
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_2DS\LR_2DS_2\bin\Debug\LR_2DS_2.exe
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_2DS\LR_2DS_2\bin\Debug\LR_2DS_2.pdb
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_2DS\LR_2DS_2\obj\Debug\LR_2DS_2.exe
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_2DS\LR_2DS_2\obj\Debug\LR_2DS_2.pdb
+C:\Users\SASHA\Documents\Visual Studio 2012\Projects\LR_2DS\LR_2DS_2\obj\Debug\LR_2DS_2.csprojResolveAssemblyReference.cache
+D:\Универ\vs12\Projects\LR_2DS\LR_2DS_2\bin\Debug\LR_2DS_2.exe.config
+D:\Универ\vs12\Projects\LR_2DS\LR_2DS_2\obj\Debug\LR_2DS_2.exe
+D:\Универ\vs12\Projects\LR_2DS\LR_2DS_2\obj\Debug\LR_2DS_2.pdb
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_2DS\LR_2DS_2\bin\Debug\LR_2DS_2.exe.config
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_2DS\LR_2DS_2\obj\Debug\LR_2DS_2.exe
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_2DS\LR_2DS_2\obj\Debug\LR_2DS_2.pdb
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_2DS\LR_2DS_2\bin\Debug\LR_2DS_2.exe
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_2DS\LR_2DS_2\bin\Debug\LR_2DS_2.pdb
+C:\Users\DmitriyGurchin\Desktop\Graphs\LR_2DS\LR_2DS_2\obj\Debug\LR_2DS_2.csprojResolveAssemblyReference.cache
